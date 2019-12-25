@@ -1,4 +1,5 @@
-OUTPUT_DIRECTORY = docs
+HTML_OUTPUT = docs
+GENERATE_LATEX = no
 JAVADOC_BANNER = YES
 INPUT = include/collect README.md
 FILE_PATTERNS = *.c *.h
