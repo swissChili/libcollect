@@ -8,6 +8,7 @@ the heap as they will be freed when the containers are freed.
 ## Types
 
 - ::map
+- ::vector
 
 ## License
 
