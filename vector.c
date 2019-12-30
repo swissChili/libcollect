@@ -27,7 +27,9 @@ void free_vector(vector *v)
 void *vector_at(vector *v, uint64_t i)
 {
     if (i < 0 || i > v->length)
+    {
         return NULL;
+    }
     else
     {
         return v->items[i];
@@ -44,11 +46,13 @@ int vector_set(vector *v, uint64_t i, void *val)
         {
             new_len *= 2;
         }
-        
+
         v->items = realloc(v->items, new_len * sizeof(void *));
 
         if (v->items == NULL)
+        {
             return 0;
+        }
     }
     v->items[i] = val;
     return 1;

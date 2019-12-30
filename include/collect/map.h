@@ -48,12 +48,14 @@ typedef struct map map;
  * @return A pointer to the allocated map
  */
 map *new_map();
+
 /**
  * @brief Allocate a map on the heap with a specific capacity. Map will be
  *        reallocated if this capacity is exceeded.
  * @return A pointer to the allocated map
  */
 map *new_map_sized(uint64_t);
+
 /**
  * @brief Free a map on the heap
  * @param m The map to free

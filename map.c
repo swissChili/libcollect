@@ -18,12 +18,12 @@ map *new_map_sized(uint64_t size)
      */
 
     map_node empty = EMPTY_NODE;
-    
+
     m->items = calloc(size, sizeof(map_node));
     m->len = MAP_ALLOC_SIZE;
     m->full = 0;
 
-    for (int i = 0 ; i < m->len; i++)
+    for (int i = 0; i < m->len; i++)
     {
         m->items[i] = empty;
     }
@@ -64,28 +64,34 @@ void map_set(map *m, char *k, void *v)
     {
         puts("not full");
         map_node val =
-        {
-            malloc(strlen(k)),
-            v,
-            1,
-            h,
-        };
+                {
+                        malloc(strlen(k)),
+                        v,
+                        1,
+                        h,
+                };
 
         strcpy(val.key, k);
 
         uint32_t current = i;
 
         while (MAP_USED_AT(m->items, current))
+        {
             if (current == m->len - 1)
+            {
                 current = 0;
+            }
             else
+            {
                 current++;
+            }
+        }
 
         MAP_DEBUG_PRINTF("Current %d\n", current);
 
         m->items[current] = val;
 
-        MAP_DEBUG_PRINTF("val %d\n", *(int *)m->items[current].val);
+        MAP_DEBUG_PRINTF("val %d\n", *(int *) m->items[current].val);
     }
     else
     {
@@ -95,15 +101,23 @@ void map_set(map *m, char *k, void *v)
         for (uint64_t j = 0; j < m->len; j++)
         {
             if (!MAP_USED_AT(m->items, j))
+            {
                 continue;
+            }
 
             uint32_t current = m->items[j].h;
 
             while (MAP_USED_AT(m->items, current))
+            {
                 if (current == m->len - 1)
+                {
                     current = 0;
+                }
                 else
+                {
                     current++;
+                }
+            }
 
             n_m->items[current] = m->items[j];
         }
@@ -123,7 +137,9 @@ int map_exists(map *m, char *k)
     while (m->items[current].used)
     {
         if (strcmp(m->items[current].key, k) == 0)
+        {
             return 1;
+        }
 
         if (current >= m->len - 1)
         {
@@ -166,8 +182,8 @@ void *map_get(map *m, char *k)
             MAP_DEBUG_PRINTF("Incrementing current\n");
         }
     }
-    
-    MAP_DEBUG_PRINTF("val %d\n", *(int *)m->items[current].val);
+
+    MAP_DEBUG_PRINTF("val %d\n", *(int *) m->items[current].val);
 
     return m->items[current].val;
 
@@ -179,6 +195,6 @@ void map_debug(map *m)
     for (int i = 0; i < m->len; i++)
     {
         if (m->items[i].val != NULL)
-            MAP_DEBUG_PRINTF("i = %d, k = %s, v = %d\n", i, m->items[i].key, *(int *)m->items[i].val);
+                MAP_DEBUG_PRINTF { ("i = %d, k = %s, v = %d\n", i, m->items[i].key, *(int *) m->items[i].val); }
     }
 }

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['used',['used',['../structmap__node.html#a879076d62a4f4f9deb75feffc6fd1940',1,'map_node']]]
+  ['size',['size',['../structvector.html#afdc1fc07df38bf5cf2044e6801ceb45b',1,'vector']]]
 ];

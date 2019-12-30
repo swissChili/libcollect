@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['map',['map',['../structmap.html',1,'']]],
-  ['map_5fnode',['map_node',['../structmap__node.html',1,'']]]
+  ['list',['list',['../structlist.html',1,'']]],
+  ['list_5fnode',['list_node',['../structlist__node.html',1,'']]]
 ];

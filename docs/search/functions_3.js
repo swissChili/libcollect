@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['new_5fmap',['new_map',['../map_8h.html#a5193bc7b8432d7e2873579aa63185c27',1,'map.h']]],
-  ['new_5fmap_5fsized',['new_map_sized',['../map_8h.html#ae8a2458fea6554c519b508cdd053582b',1,'map.h']]],
-  ['new_5fvector',['new_vector',['../vector_8h.html#a7d6ba7f85dfee8aa4e702ab21a3f38f8',1,'vector.h']]],
-  ['new_5fvector_5fsized',['new_vector_sized',['../vector_8h.html#a2c364cfa37c9d02bfb1de626f62d2a15',1,'vector.h']]]
+  ['map_5fdebug',['map_debug',['../map_8h.html#a3a87bba4af6dfe8179516f26ba56c5f9',1,'map.h']]],
+  ['map_5fexists',['map_exists',['../map_8h.html#a8254246acf42bdc32d6e53e17708bcf3',1,'map.h']]],
+  ['map_5fget',['map_get',['../map_8h.html#aa6bbe7b3686e1bd7f87b86ab48dad6db',1,'map.h']]],
+  ['map_5fset',['map_set',['../map_8h.html#aa0a79fdac7a6bbbdab1ecd26c9903e45',1,'map.h']]]
 ];
